@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Where in the world?</title>
+		<link rel="stylesheet" href="style.css" />
+		<script
+			src="https://kit.fontawesome.com/fa1f8eb79d.js"
+			crossorigin="anonymous"
+		></script>
+		<style></style>
+	</head>
+	<body
+		class="bg-light-gray text-text-dark-blue font-nunito-sans"
+		onload="loadData()"
+	>
+		<!-- header -->
+		<header class="sticky top-0 shadow-md bg-white z-50">
+			<nav class="container mx-auto py-4 flex justify-between">
+				<div id="nav-logo" class="text-2xl font-extrabold">
+					Where in the world?
+				</div>
+				<button
+					id="dark-mode"
+					class="font-extrabold text-sm py-2 px-3 rounded-md focus:outline-none hover:shadow-inner"
+				>
+					<i class="far fa-moon mr-2"></i>Dark Mode
+				</button>
+			</nav>
+		</header>
+
+		<!-- main section -->
+		<main class="container mx-auto mt-10">
+			<div id="search-and-filter" class="flex justify-between">
+				<div id="search" class="w-4/12">
+					<form
+						id="search"
+						class="flex items-center shadow rounded-sm overflow-hidden"
+					>
+						<i class="fas fa-search text-center px-5 text-gray-500"></i>
+						<input
+							id="search-field"
+							type="text"
+							placeholder="Search for a country..."
+							class="py-3 w-full px-5 focus:outline-none text-sm"
+						/>
+					</form>
+				</div>
+				<div id="list" class="relative w-2/12">
+					<!-- filter options -->
+					<button
+						id="filter-btn"
+						class="w-full text-sm font-semibold shadow hover:shadow foucs:shadow focus:outline-none py-3 rounded-sm"
+					>
+						<span id="filter-btn-title" class="float-left px-5"
+							>Filter by Region</span
+						>
+						<i class="fas fa-angle-down float-right mt-1 px-5"></i>
+					</button>
+					<div
+						id="list-container"
+						class="absolute w-full bg-white flex-col shadow rounded-sm mt-2 overflow-hidden text-sm font-semibold flex hidden"
+					>
+						<label
+							class="cursor-pointer hover:bg-gray-800 hover:text-gray-100 px-5 py-3"
+							for="All"
+						>
+							<input class="hidden" type="radio" id="All" name="filter" />All
+						</label>
+
+						<label
+							class="cursor-pointer hover:bg-gray-800 hover:text-gray-100 px-5 py-3"
+							for="Africa"
+						>
+							<input
+								class="hidden"
+								type="radio"
+								id="Africa"
+								name="filter"
+							/>Africa
+						</label>
+
+						<label
+							class="cursor-pointer hover:bg-gray-800 hover:text-gray-100 px-5 py-3"
+							for="Americas"
+						>
+							<input
+								class="hidden"
+								type="radio"
+								id="Americas"
+								name="filter"
+							/>Americas
+						</label>
+
+						<label
+							class="cursor-pointer hover:bg-gray-800 hover:text-gray-100 px-5 py-3"
+							for="Asia"
+						>
+							<input class="hidden" type="radio" id="Asia" name="filter" />Asia
+						</label>
+
+						<label
+							class="cursor-pointer hover:bg-gray-800 hover:text-gray-100 px-5 py-3"
+							for="Europe"
+						>
+							<input
+								class="hidden"
+								type="radio"
+								id="Europe"
+								name="filter"
+							/>Europe
+						</label>
+
+						<label
+							class="cursor-pointer hover:bg-gray-800 hover:text-gray-100 px-5 py-3"
+							for="Oceania"
+						>
+							<input
+								class="hidden"
+								type="radio"
+								id="Oceania"
+								name="filter"
+							/>Oceania
+						</label>
+					</div>
+				</div>
+			</div>
+
+			<div
+				id="country-list-grid"
+				class="grid mx-12 lg:mx-0 lg:grid-cols-4 lg:grid-flow-row-dense gap-16 mt-12 z-0 rounded-lg"
+			></div>
+		</main>
+
+		<script src="./js/jquery-3.5.1.min.js"></script>
+		<script src="./js/app.js"></script>
+	</body>
+</html>

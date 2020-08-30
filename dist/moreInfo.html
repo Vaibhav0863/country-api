@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title id="title">Document</title>
+		<link rel="stylesheet" href="style.css" />
+		<script
+			src="https://kit.fontawesome.com/fa1f8eb79d.js"
+			crossorigin="anonymous"
+		></script>
+	</head>
+	<body
+		onload="loadData()"
+		class="bg-light-gray text-text-dark-blue font-nunito-sans"
+	>
+		<!-- header -->
+		<header class="sticky top-0 shadow-md bg-white z-50">
+			<nav class="container mx-auto py-4 flex justify-between">
+				<div id="nav-logo" class="text-2xl font-extrabold">
+					Where in the world?
+				</div>
+				<button
+					id="dark-mode"
+					class="font-extrabold text-sm py-2 px-3 rounded-md focus:outline-none hover:shadow-inner"
+				>
+					<i class="far fa-moon mr-2"></i>Dark Mode
+				</button>
+			</nav>
+		</header>
+
+		<main class="container mx-auto mt-12">
+			<!-- back button -->
+			<div>
+				<button
+					class="shadow px-6 py-2 text-sm font-semibold rounded-sm focus:outline-none"
+					onclick="location.href='./index.html'"
+				>
+					<i class="fas fa-chevron-left mr-2"></i> Back
+				</button>
+			</div>
+
+			<!-- result -->
+			<div id="result" class="mt-8 grid grid-cols-2 grid-flow-row-dense">
+				<!-- <div id="flag" class="w-10/12 self-center rounded-lg overflow-hidden">
+					<img
+						class="w-full object-cover"
+						src="https://restcountries.eu/data/ind.svg"
+						alt="India"
+					/>
+				</div>
+				<div class="py-6">
+					<h1 class="text-4xl font-extrabold">India</h1>
+					<div id="country-desc" class="mt-5 flex justify-between">
+						<div>
+							<p class="font-semibold leading-loose">
+								Native : <span class="font-light">Bharat</span>
+							</p>
+							<p class="font-semibold leading-loose">
+								Population : <span class="font-light">22,55,555</span>
+							</p>
+							<p class="font-semibold leading-loose">
+								Region : <span class="font-light">Asia</span>
+							</p>
+							<p class="font-semibold leading-loose">
+								Sub Region : <span class="font-light">Southern Asia</span>
+							</p>
+							<p class="font-semibold leading-loose">
+								Capital : <span class="font-light">New Delhi</span>
+							</p>
+						</div>
+
+						<div>
+							<p class="font-semibold leading-loose">
+								Top Level Domain : <span class="font-light">.in</span>
+							</p>
+							<p class="font-semibold leading-loose">
+								Currency : <span class="font-light">Inr</span>
+							</p>
+							<p class="font-semibold leading-loose">
+								Languages :
+								<span class="font-light"
+									>Marathi,Hindi,Tamil,English,Telgu</span
+								>
+							</p>
+						</div>
+					</div>
+					<div id="border" class="mt-12 flex">
+						<p class="font-extrabold">Border Countries:</p>
+						<div class="ml-3 text-sm">
+							<span class="mx-1 px-3 py-2 shadow hover:shadow-md rounded-sm"
+								>France</span
+							>
+							<span class="mx-1 px-3 py-2 shadow hover:shadow-md rounded-sm"
+								>Germany</span
+							>
+							<span class="mx-1 px-3 py-2 shadow hover:shadow-md rounded-sm"
+								>Netherlands</span
+							>
+						</div>
+					</div>
+				</div> -->
+			</div>
+		</main>
+
+		<script src="./js/jquery-3.5.1.min.js"></script>
+		<script src="./js/more_info.js"></script>
+		<script></script>
+	</body>
+</html>
